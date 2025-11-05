@@ -1,0 +1,307 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-fundo: #121212;
+    --cor-primaria: #ff4500; /* Laranja/Vermelho Vibrante (Tema Free Fire) */
+    --cor-texto: #f0f0f0;
+    --cor-card: #222222;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0a0a0a;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #333;
+}
+
+.nav-button {
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #333;
+    color: var(--cor-texto);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    flex-grow: 1; 
+    max-width: 300px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.nav-button.destaque {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    border: 2px solid var(--cor-primaria);
+    font-size: 1.1em;
+}
+
+.nav-button.destaque:hover {
+    background-color: #ff6622;
+    border-color: #ff6622;
+}
+
+/* --- SLIDER STYLES --- */
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--cor-primaria);
+    margin-top: 20px;
+}
+
+.slide {
+    width: 100%;
+    display: none; 
+    aspect-ratio: 16 / 5; 
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block; 
+}
+
+/* --- ESTILOS DO VÍDEO LOCAL --- */
+#midia {
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px; 
+    margin: 20px auto;
+}
+
+#midia video {
+    width: 100%;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 8px;
+}
+
+/* --- ESTILOS DO FORMULÁRIO DENTRO DO MODAL (Reutilização de estilos) --- */
+/* Remove o estilo de cartão da seção de inscrição anterior, pois o modal-content já tem padding e fundo */
+#inscricao {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+fieldset {
+    border: 1px solid var(--cor-primaria);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+legend {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: var(--cor-texto);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6622;
+}
+
+.checkbox-area {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-area a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* --- ESTILOS DO MODAL (POP-UP) --- */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Adiciona rolagem se o conteúdo for grande */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+    background-color: var(--cor-card);
+    margin: 5% auto; 
+    padding: 20px;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 600px; 
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.5); 
+}
+
+/* Botão de Fechar */
+.close-btn {
+    color: var(--cor-primaria);
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+}
+/* FIM DOS ESTILOS DO MODAL */
+
+
+/* --- ESTILOS PARA TABELAS (RANKING) --- */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+}
+
+.ranking-table th, .ranking-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+
+.ranking-table th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.ranking-table td {
+    background-color: #2a2a2a;
+}
+
+.ranking-table tr:nth-child(even) td {
+    background-color: #303030;
+}
+
+.ranking-table tr:hover td {
+    background-color: #404040;
+}
+
+.rank-position {
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .main-nav {
+        flex-direction: column; 
+    }
+    .nav-button {
+        max-width: 100%;
+    }
+    .modal-content {
+        margin: 10% auto; /* Ajusta o modal para mobile */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0a0a0a;
+    margin-top: 30px;
+    color: #888;
+    font-size: 0.8em;
+}

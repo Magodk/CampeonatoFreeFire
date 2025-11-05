@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Campeonato Free Fire - Inscrição Oficial</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>🔥 Free Fire Ultimate Championship 🔥</h1>
+        <p>Prepare seu Squad! As inscrições estão abertas!</p>
+    </header>
+
+    <nav class="main-nav">
+        <a href="#" id="abrirModalBtn" class="nav-button destaque">INSCRIÇÃO</a>
+        <a href="aprovados.html" class="nav-button">APROVADOS</a>
+        <a href="rankings.html" class="nav-button">RANKINGS</a>
+    </nav>
+    <section id="slider">
+        <h2>🗓️ Datas e Premiação</h2>
+        <div class="slider-container">
+            <img src="imagem1.png" alt="Banner 1 - Premiação" class="slide active">
+            <img src="imagem2.png" alt="Banner 2 - Data Limite" class="slide">
+            <img src="imagem3.png" alt="Banner 3 - Formato do Torneio" class="slide">
+            <img src="imagem4.png" alt="Banner 4 - Regras Rápidas" class="slide">
+            <img src="imagem5.png" alt="Banner 5 - Link do Discord" class="slide">
+        </div>
+    </section>
+
+    <section id="midia">
+        <h2>🎬 Trailer Oficial do Campeonato</h2>
+        <div class="video-container">
+            <video width="100%" controls poster="capa_video.jpg">
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta o formato de vídeo MP4.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Free Fire Championship. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="modalInscricao" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span> 
+            
+            <section id="inscricao" class="modal-form-area">
+                <h2>📝 Formulário de Inscrição</h2>
+                <form id="formInscricao" action="https://formspree.io/f/mnnoeawn" method="POST"> 
+                    
+                    <fieldset>
+                        <legend>Dados da Equipe</legend>
+                        <label for="nome_time">Nome do Time:</label>
+                        <input type="text" id="nome_time" name="Nome do Time" required>
+                        
+                        <label for="nome_guilda">Nome da Guilda (Opcional):</label>
+                        <input type="text" id="nome_guilda" name="Nome da Guilda">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do Capitão (Contato)</legend>
+                        <label for="nick_capitao">Nick/ID do Jogo (Capitão):</label>
+                        <input type="text" id="nick_capitao" name="Nick Capitao" required>
+                        
+                        <label for="email_capitao">Email de Contato:</label>
+                        <input type="email" id="email_capitao" name="_replyto" required>
+
+                        <label for="whatsapp">WhatsApp (com DDD):</label>
+                        <input type="tel" id="whatsapp" name="Whatsapp" placeholder="(XX) XXXXX-XXXX" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Membros do Squad (Nick/ID)</legend>
+                        <label for="membro2">Membro 2:</label>
+                        <input type="text" id="membro2" name="Membro 2" required>
+                        
+                        <label for="membro3">Membro 3:</label>
+                        <input type="text" id="membro3" name="Membro 3" required>
+                        
+                        <label for="membro4">Membro 4:</label>
+                        <input type="text" id="membro4" name="Membro 4" required>
+
+                        <label for="reserva">Membro 5 (Reserva - Opcional):</label>
+                        <input type="text" id="reserva" name="Reserva">
+                    </fieldset>
+
+                    <div class="checkbox-area">
+                        <input type="checkbox" id="aceite_regras" name="aceite_regras" required>
+                        <label for="aceite_regras">Li e aceito o <a href="regulamento.html" target="_blank">Regulamento Completo</a> do campeonato.</label>
+                    </div>
+
+                    <button type="submit">INSCREVER TIME</button>
+                    <p id="mensagemErro" class="erro"></p>
+                </form>
+            </section>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
