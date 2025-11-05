@@ -120,7 +120,6 @@ section {
 }
 
 /* --- ESTILOS DO FORMULÁRIO DENTRO DO MODAL (Reutilização de estilos) --- */
-/* Remove o estilo de cartão da seção de inscrição anterior, pois o modal-content já tem padding e fundo */
 #inscricao {
     background-color: transparent;
     padding: 0;
@@ -293,7 +292,7 @@ button[type="submit"]:hover {
         max-width: 100%;
     }
     .modal-content {
-        margin: 10% auto; /* Ajusta o modal para mobile */
+        margin: 10% auto; 
     }
 }
 
